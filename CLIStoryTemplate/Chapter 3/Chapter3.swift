@@ -6,7 +6,7 @@
 import Foundation
 
 func chapterThree() {
-  let name = "Bob"
+  let name = "Jen"
     var age = 23
     
     print("the man's name was \(name). He was \(age) years old.")
