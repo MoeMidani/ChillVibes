@@ -5,10 +5,11 @@
 
 import Foundation
 
+
 func chapterThree() {
-  let name = "Bob"
-    var age = 23
+  let name = "Jen"
+    let ageNow = 23
     
-    print("the man name was \(name). He was \(age) years old.")
+    print("the man's name was \(name). He was \(ageNow) years old.")
     // Your portion of the story goes here
 }
