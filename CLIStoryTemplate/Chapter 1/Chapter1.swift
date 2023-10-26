@@ -10,7 +10,7 @@ func chapterOne() {
     var characterName = ""
     var characterPronouns = ["they", "their", "theirs", "themself", "kid","them","they're"]
     var characterAge = 12
-    var storyDecision = "1"
+   // var storyDecision =
     
     func newAge(yearAdd: Int) -> Int {
             let updatedAge = characterAge + yearAdd
@@ -62,26 +62,26 @@ func chapterOne() {
     // Accessing itesm from array ex. \(characterPronouns[0]. *remeber array index starts at 0.
         
             //0 = subject pronoun: he, she they
-            //1 = object pronoun: him, her, them
+            //1 = object pronoun: his, her, their
             //2 = is a possessive pronoun: his, hers, theirs
-            //3 = added for himself, hersolf, their self
+            //3 = added for himself, hersolf, themself
             //4 = added for direct gender reference: boy, girl, kid
-
+            //5 = added for him, her, them
+            //6 = added for he's, she's, they're
             
         print("\nOnce upon a time there was a little \(characterPronouns[4]) named \(characterName). \(characterPronouns[0].capitalized) lived with \(characterPronouns[1]) grandpa George and every weekend they would take an adventure through the forest. \(characterName) loved to find things and explore the forest with grandpa George. \(characterName)'s favorite thing to do was to look for clues and find different animals. On every adventure \(characterName)'s grandpa taught \(characterPronouns[5]) how to use \(characterPronouns[1]) eyes, ears, nose and hands to make new discoveries. \(characterName) would soon be \(newAge(yearAdd: 1)), and grandpa George wants to test \(characterPronouns[1]) knowledge, so he put together a plan. Grandpa George tells \(characterPronouns[5]) that if \(characterPronouns[0]) can get through the forest by \(characterPronouns[3]), \(characterPronouns[0]) will receive a prize. \(characterName) needs to use all \(characterPronouns[1]) senses to get through the forest alone. \(characterName) is sure \(characterPronouns[0]) can do it, but \(characterPronouns[6]) still a little afraid.\(characterPronouns[0].capitalized) needs your help! With \(characterPronouns[1]) tools on their back you you by there side, \(characterPronouns[6]) sure to pass grandpa's test.")
            
                 print("\nEnter '1' to go down the river path.\nEnter '2' to explore the abandoned shack.")
     
-    
-            
+    var storyDecision = ""
     if let decision = readLine()
                 {
-    let storyDecsion = decision
-                switch storyDecsion {
+         storyDecision = decision
+                switch storyDecision {
                     case "1" :
-                    print("\n\(characterName) decided to follow the river path and soon came across fresh animal tracks on the muddy riverbank. \(characterName) couldn't help but wonder what kind of animal the tracks belonged to and where they would lead, so she decided to follow them. The tracks took \(characterPronouns[5]) deeper into the forest, winding through tall grass and over rocks.  As \(characterName) ventured further into the woods, \(characterPronouns[0]) came upon a curious raccoon with a mischievous glint in its eyes. The raccoon chattered inquisitively at \(characterName) and tugged at a piece of paper stuck in a thorny bush. It was a map that led to a big tree with a beehive and some honey pots. \(characterName) realized the raccoon was on a quest for the honey and decided to help the racoon get there. \(characterPronouns[0].capitalized) carefully followed the map and when they reached the tree, \(characterName) and the raccoon each took a honey pot. While putting the honey pot in \(characterPronouns[1]) backpack, \(characterName) ntocied something carved into the trunk of the great oak tree...it was picure of Sleepy Cave. \(characterPronouns[0]) had explored the cave before with grandpa George, so \(characterPronouns[0]) knew just where to go!")
+                    print("\n\(characterName) decided to follow the river path and soon came across fresh animal tracks on the muddy riverbank. \(characterName) couldn't help but wonder what kind of animal the tracks belonged to and where they would lead, so \(characterPronouns[0]) decided to follow them. The tracks took \(characterPronouns[5]) deeper into the forest, winding through tall grass and over rocks.  As \(characterName) ventured further into the woods, \(characterPronouns[0]) came upon a curious raccoon with a mischievous glint in its eyes. The raccoon chattered inquisitively at \(characterName) and tugged at a piece of paper stuck in a thorny bush. It was a map that led to a big tree with a beehive and some honey pots. \(characterName) realized the raccoon was on a quest for the honey and decided to help the racoon get there. \(characterPronouns[0].capitalized) carefully followed the map and when they reached the tree, \(characterName) and the raccoon each took a honey pot. While putting the honey pot in \(characterPronouns[1]) backpack, \(characterName) notcied something carved into the trunk of the great oak tree...it was picure of Sleepy Cave. \(characterPronouns[0]) had explored the cave before with grandpa George, so \(characterPronouns[0]) knew just where to go!")
                 case "2":
-                    print("\n\(characterName)'s curiosity got the better of \(characterPronouns[5]), and \(characterPronouns[0]) decided to explore the mysterious abandoned shack. The old building was hidden beneath the thick canopy; its windows were broken, and its wooden planks had been weathered by time, but \(characterPronouns[0]) decided to go in to look around. Once inside, \(characterPronouns[0]) went into the kitchen, where \(characterPronouns[0]) found a map sitting on the table. At the center of the map was a giant tree marked with an X. \(characterName) was just about to put the map in \(characterPronouns[1]) backpack when two black bats flew from one of the cupboards. Startled, \(characterName) ran out of the house as fast as \(characterPronouns[0]) could. \(characterPronouns[0].capitalized) ran for what seemed like forever before stopping at the foot a large oak tree. Without realizing it, \(characterPronouns[0]) had found \(characterPronouns[1]) way to the giant tree from the map! \(characterName) studied the tree and soon discovered a piece of paper tied to one of its branches…it was drawing of Sleepy Cave. \(characterName) had explored the cave before with grandpa George, so \(characterPronouns[0]) knew just where to go!")
+                    print("\n\(characterName)'s curiosity got the better of \(characterPronouns[5]), and \(characterPronouns[0]) decided to explore the mysterious abandoned shack. The old building was hidden beneath the thick canopy; its windows were broken, and its wooden planks had been weathered by time, but \(characterPronouns[0]) decided to go in to look around. Once inside, \(characterPronouns[0]) went into the kitchen, where \(characterPronouns[0]) found a map sitting on the table. At the center of the map was a giant tree marked with an X. \(characterName) was just about to put the map in \(characterPronouns[1]) backpack when two black bats flew from one of the cupboards. Startled, \(characterName) ran out of the house as fast as \(characterPronouns[0]) could. \(characterPronouns[0].capitalized) ran for what seemed like forever before stopping at the foot a large oak tree. Without realizing it, \(characterPronouns[0]) had found \(characterPronouns[1]) way to the giant tree from the map! \(characterName) studied the tree and soon discovered a piece of paper tied to one of its branches...it was drawing of Sleepy Cave. \(characterName) had explored the cave before with grandpa George, so \(characterPronouns[0]) knew just where to go!")
                 default:
                     print("which path will you direction will you choose, '1' or '2'? ")
                     }
