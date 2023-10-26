@@ -7,5 +7,5 @@ import Foundation
 
 func chapterTwo() {
     
-  print("hello")
+ // print("hello")
 }
