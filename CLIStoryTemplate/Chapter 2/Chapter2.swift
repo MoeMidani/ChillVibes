@@ -4,7 +4,70 @@
 //
 
 import Foundation
+var caveFeels = ["wet", "dry"]
+let w = wetAndRight || wetAndLeft
+let d = dryAndRight || dryAndLeft
+let senseTouch = "touch"
+let senseSound = "sound"
+let wetAndRight = true
+let wetAndLeft = false
+let dryAndRight = false
+let dryAndLeft = false
+let userFavSong = "2nd clue"
+var cN = characterName
+var cP = characterPronouns
+
 
 func chapterTwo() {
+   
+    let charactersDate = Date()
+
     
- // print("hello")
+    print(charactersDate)
+    
+    print("\n\(characterName) makes \(characterPronouns[1]) way to the entrance of Sleepy Cave. It is extremely hollow inside and the cave is pitch black. \(characterPronouns[0]) discovers \(characterPronouns[1]) flashlight has broken, and \(characterPronouns[0]) would have to rely on \(characterPronouns[1]) sense of \(senseTouch) and \(senseSound)  to get to the \(userFavSong) in the cave tunnels. The cave is full of challenges and surprises and it’s up to \(characterPronouns[5]) to find the best route to get to his grandpa’s clue.")
+    
+    print("\n\(characterName) takes \(characterPronouns[1]) first step inside Sleepy Cave and \(characterPronouns[0]) is shocked  to notice that one side of the caves’ wall is wet, while the other is dry and \(characterPronouns[0]) remembers that one of the cave tunnel routes leads directly to the Shark Tooth Creek. \(characterPronouns[0].capitalized) also remembers that the excess water from the creek creates a condensation that sticks to the right side of a cave tunnel. \(characterPronouns[0].capitalized) knows all of these things because it was \(characterPronouns[1]) grandpa’s favorite trail, so it must be the trail that the \(userFavSong) is on. \(characterPronouns[0].capitalized) continues to walk forward while keeping \(characterPronouns[1]) hand on the wet, right side of the cave until he approaches a 2-way split in the tunnel, and is startled by the sound of woman screeching. The sound causes him to stumble to the ground, release his hand from the caves' wall and place it on the ground where he is almost bitten by a swarm of fire ants. This causes him to remember the cave song his grandpa taught him as a toddler, “Touch the walls, and not the ground, but if no walls, use your sound”. \(characterPronouns[0].capitalized) stands up, ready's himself and chooses which path and which wall trail he should follow ")
+    
+    
+    
+    print("\nEnter '1' to hold wet wall with left hand. \nEnter '2' to hold wet wall with right hand. ")
+    
+    var storyDecision2 = ""
+    if let decision2 = readLine()
+    {
+        storyDecision2 = decision2
+        switch storyDecision2{
+        case "1" :
+            print("\(characterName) chooses to walk down the cave with \(characterPronouns[1]) left hand on the side of the caves wall and the other in front of him so that he does not fall again to avoid the fire ants. \(characterPronouns[0]) walks for what seems like forever to \(characterPronouns[5]) until \(characterPronouns[0]) hears the sound of critter animals and wolves howling in the night. \(characterPronouns[0]) has made it to the entrance of Sleepy Cave again! It is almost midnight, \(characterPronouns[0]) is hungry and dehydrated, and \(characterPronouns[0]) hears the footsteps and the wolves growls getting louder.")
+        case"2":
+            print ("\(cN) chooses to walk up the cave with one hand on the wet, right side of the caves’ wall and the other in front of \(cP[5]) so that \(cP[0]) does not fall again to avoid the ants. \(cP[0]) walks for about 7 minutes, until \(cP[0]) hears the sound of a record scratching and a person screeching repeatedly. \(cP[0]) starts to notice that the person’s voice sounds familiar and realizes that it was one of \(cP[2]) grandpa’s favorite songs playing on a broken record player which caused the song to skip. \(cN) was terrified of the sound when \(cP[0]) first entered the cave, but now \(cP[0]) feels a moment of relief and \(cP[0]) sees a glimmer of light that starts to fill the whole cave up. As \(cP[0]) starts to walk toward the light source, \(cP[0]) approaches a cave wall with some writing on it. It’s in \(cP[1]) grandpa’s hand writing! The message tells \(cN) to solve the math equation on the wall in order to get the combination for a nearby safe with a nice prize in it. Filled with excitement, \(cN) reads the equation and gets to work!" )
+            
+        default:
+            print("neutral")
+            
+        }
+        let mathEquation1 = 17
+        let mathEquation2 = 88
+        let safeCombination = mathEquation1 + mathEquation2
+        var safeCombo = safeCombination
+        
+        print ("Solve this line to get a prize \(mathEquation1)+\(mathEquation2)=")
+        if let safeCombo = readLine(){
+            print()
+        }
+       /* if let wall = readLine(){
+            let caveWall = wall.lowercased()
+            switch caveWall {
+            case "1" :
+                caveFeels = ["wet"]
+            case "2":
+                caveFeels = ["dry"]
+            default:
+                print("which wall should I touch")*/
+            
+            
+        
+        
+    }
+}
