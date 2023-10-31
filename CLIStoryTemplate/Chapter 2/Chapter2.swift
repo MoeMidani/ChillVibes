@@ -18,6 +18,7 @@ var cN = characterName
 var cP = characterPronouns
 
 
+
 func chapterTwo() {
    
     let charactersDate = Date()
@@ -46,17 +47,21 @@ func chapterTwo() {
         default:
             print("neutral")
             
+        }; if storyDecision2 == "1"{
+            print("\(cN) made the wrong choice, so \(cP[0])entered back into the cave and began the trail again...")
+            print("\(cP[0]) walks for about 15 minutes, until \(cP[0]) hears the sound of a record scratching and a person screeching repeatedly. \(cP[0]) starts to notice that the person’s voice sounds familiar and realizes that it was one of \(cP[2]) grandpa’s favorite songs playing on a broken record player which caused the song to skip. \(cN) was terrified of the sound when \(cP[0]) first entered the cave, but now \(cP[0]) feels a moment of relief and \(cP[0]) sees a glimmer of light that starts to fill the whole cave up. As \(cP[0]) starts to walk toward the light source, \(cP[0]) approaches a cave wall with some writing on it. It’s in \(cP[1]) grandpa’s hand writing! The message tells \(cN) to solve the math equation on the wall in order to get the combination for a nearby safe with a nice prize in it. Filled with excitement, \(cN) reads the equation and gets to work!")
         }
-        let mathEquation1 = 17
-        let mathEquation2 = 88
+        let mathEquation1 = Int.random(in: 1...999)
+        let mathEquation2 = Int.random(in: 1...999)
         let safeCombination = mathEquation1 + mathEquation2
-        var safeCombo = safeCombination
+        let safeCombo = safeCombination
         
-        print ("Solve this line to get a prize \(mathEquation1)+\(mathEquation2)=")
+        print ("\nSolve this line to get a prize \(mathEquation1) + \(mathEquation2) =")
         if let safeCombo = readLine(){
             print()
         }
-       /* if let wall = readLine(){
+        print("Great!!! \n\(cP[0].capitalized) input the combination to the safe, opened the door and grabbed another one of grandpa's clues. It was an old compass pointing west, as if it were telling \(cP[5]) to travel to the forest. \(cN) grabbed all of \(cP[2]) items and tools and proceeded to exit the cave, towards (Forest Name).")
+       /* if let wall = readLiene(){
             let caveWall = wall.lowercased()
             switch caveWall {
             case "1" :
