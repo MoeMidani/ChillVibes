@@ -24,7 +24,7 @@ func newAge(yearAdd: Int) -> Int {
         print("Come on, we need know how old you are!")
     }
     
-    print("Enter your age (ex. '12').")
+    print("Enter your age (numerical).")
     
     if let age = readLine() {
         print("Wow, you're \(age) years old! Ok, almost time to start your adeventure, we just need your gender!")
