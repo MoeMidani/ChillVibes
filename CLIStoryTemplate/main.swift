@@ -7,40 +7,61 @@ import Foundation
 var characterName = ""
 var characterPronouns = ["they", "their", "theirs", "themself", "kid","them","they're"]
 var characterAge = 12
-// var storyDecision =
+var characterGender = ""
+
 
 func newAge(yearAdd: Int) -> Int {
         let updatedAge = characterAge + yearAdd
         return updatedAge
     }
 
+    print("Enter your name!")
+    
+    var name = readLine()
+while name == ""{
+    
+print("""
+Come on, we don't be shy..."
+    enter your name!
+""")
+    name = readLine()
+}
 
-    print("Enter your name")
+characterName = name?.capitalized ?? "Sam"
+print("""
+Hello \(characterName), that's a great name! Next, we need to know how old you are!
+    Enter your age (numerical).
+""")
+
     
-    if let name = readLine() {
-        print("Hello \(name.capitalized), that's a great name! Next we need to know how old you are!")
-        characterName = name.capitalized
-    } else {
-        print("Come on, we need know how old you are!")
+var age = readLine()
+
+
+while age == "" {
+    print("""
+    Awww, come on now...how old are ya....
+          Enter your age (numerical)!
+    """)
+    age = readLine()
+    
     }
-    
-    print("Enter your age (numerical).")
-    
-    if let age = readLine() {
-        print("Wow, you're \(age) years old! Ok, almost time to start your adeventure, we just need your gender!")
-        characterAge = Int(age) ?? 12
-    } else {
-        print("we'll use neutral if you don't want to say")
-    }
-    
-    
-    print("Enter 'b' for boy, 'g' for girl, or 'n' for neutral")
-    
-    
-    if let gender = readLine()
-    {
-        
-        let characterGender = gender.lowercased()
+characterAge = Int(age ?? "12") ?? 0
+    print("""
+Wow, you're \(characterAge) years old! Ok, almost time to start your adeventure, we just need your gender!
+    Enter 'b' for boy, 'g' for girl, or 'n' for neutral.
+""")
+  
+    var gender = readLine()
+while gender == "" {
+    print("""
+Seriously, no need to be shy.....
+Enter 'b' for boy, 'g' for girl, or 'n' for neutral.
+
+""")
+    gender = readLine()
+}
+
+characterGender = gender?.lowercased() ?? "n"
         
         switch characterGender {
         case "b":
@@ -53,8 +74,7 @@ func newAge(yearAdd: Int) -> Int {
             print("if genter entry was invalid, the story defaults to neutral.")
             
         }
-    }
-
+    
 func readStory() {
     chapterOne()
     chapterTwo()
@@ -64,4 +84,3 @@ func readStory() {
 }
 
 readStory()
-
