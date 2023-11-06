@@ -6,7 +6,8 @@
 import Foundation
 var characterName = ""
 var characterPronouns = ["they", "their", "theirs", "themself", "kid","them","they're"]
-var characterAge = 12
+var characterAge : Int = 12
+//let name = ""
 // var storyDecision =
 
 func newAge(yearAdd: Int) -> Int {
@@ -17,27 +18,37 @@ func newAge(yearAdd: Int) -> Int {
 
     print("Enter your name")
     
-    if let name = readLine() {
+    if var name = readLine() {
+       print (name)
+        while (name == ""){
+            print("Come on, enter your name. dont be shy :)")
+            name = readLine()!
+        }
         print("Hello \(name.capitalized), that's a great name! Next we need to know how old you are!")
         characterName = name.capitalized
+        
+        print(characterName)
     } else {
         print("Come on, we need know how old you are!")
     }
     
     print("Enter your age (ex. '12').")
     
-    if let age = readLine() {
-        print("Wow, you're \(age) years old! Ok, almost time to start your adeventure, we just need your gender!")
-        characterAge = Int(age) ?? 12
-    } else {
-        print("we'll use neutral if you don't want to say")
+if var age = readLine() {
+    print(age)
+    while (age == ""){
+        print("Enter your age, dont be shy")
+        age = readLine()!
     }
-    
+    print("Wow, you're \(age) years old! Ok, almost time to start your adeventure, we just need your gender!")
+
+}
+
     
     print("Enter 'b' for boy, 'g' for girl, or 'n' for neutral")
     
     
-    if let gender = readLine()
+    if var gender = readLine()
     {
         
         let characterGender = gender.lowercased()
@@ -50,8 +61,13 @@ func newAge(yearAdd: Int) -> Int {
         case "n":
             characterPronouns = ["they", "their", "theirs", "themself", "kid","them","they're"]
         default:
-            print("if genter entry was invalid, the story defaults to neutral.")
+            print("")
             
+        }
+        while (gender == ""){        
+            print("Enter your gender, dont be shy")
+            gender = readLine()!
+
         }
     }
 
