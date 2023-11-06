@@ -1,4 +1,3 @@
-
 func chapterOne() {
     
     /*Portion of code below was moved to main so it could be accessed by all chapters
@@ -221,4 +220,3 @@ func chapterOne() {
     }
 }
     
-
