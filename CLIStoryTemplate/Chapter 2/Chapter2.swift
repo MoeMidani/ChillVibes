@@ -70,7 +70,7 @@ func chapterTwo() {
         let safeCombo = safeCombination
         
         print ("\nSolve this line to get a prize \(mathEquation1) + \(mathEquation2) =")
-        if let safeCombo = readLine(){
+        if readLine() != nil{
             print()
         }
         print("Great!!! \n\(cP[0].capitalized) input the combination to the safe, opened the door and grabbed another one of grandpa's clues. It was an old compass pointing west, as if it were telling \(cP[5]) to travel to the forest. \(cN) grabbed all of \(cP[2]) items and tools and proceeded to exit the cave, towards Fantasy Forest.")
