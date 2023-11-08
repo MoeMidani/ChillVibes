@@ -192,7 +192,7 @@ func chapterOne() {
         
         let Q1 = AnimalQuestion(question: "\nWhat animal has teeth that grow forever, and sometimes lives in colonies called fluffles?", answer: "Rabbit", hint: "Peter had a cotton tail.")
         let Q2 = AnimalQuestion(question: "\nWhat animal has sharp teeth, howls in the night, and eats both plants and animals?", answer: "Coyote", hint: "Wolves aren't the only wild thing that howls!")
-        let Q3 = AnimalQuestion(question: "\nWhich animal is a member of the Sciuridae family, goes chip-chip when it senses danger, and eats a diet of plants, seeds, berries, insects, worms, and frogs?", answer: "chipmunk", hint: "This little animal wears two stripes on it's back!")
+        let Q3 = AnimalQuestion(question: "\nWhich animal is a member of the Sciuridae family, goes chip-chip when it senses danger, and eats a diet of plants, seeds, berries, insects, worms, and frogs?", answer: "Chipmunk", hint: "This little animal wears two stripes on it's back!")
         let Q4 = AnimalQuestion(question: "\nWhat animal can jump 15 feet, have a litter of 25 babies, and run up to 30 miles per hour?", answer: "Fox", hint: "This bushy tailed animal is sly and small to medium in size!")
         let Q5 = AnimalQuestion(question: "What animal only partially digests its food, and expells the rest in the form of pellets?", answer: "Owl", hint: "This animal's head can almost rotate in a full circle!")
         
@@ -230,7 +230,7 @@ func chapterOne() {
             
                         while userAnswer == "" {
                             print(selectedQuestions[index].question)
-                            userAnswer = readLine()
+                            userAnswer = readLine()?.capitalized
                         }
 
                         if needHint == "hint".description.capitalized || userAnswer != selectedQuestions[index].answer{
@@ -238,7 +238,7 @@ func chapterOne() {
                             
                             print(selectedQuestions[index].hint)
                            
-                            userAnswer = readLine()
+                            userAnswer = readLine()?.capitalized
                         }
                         
                         if userAnswer == selectedQuestions[index].answer{
