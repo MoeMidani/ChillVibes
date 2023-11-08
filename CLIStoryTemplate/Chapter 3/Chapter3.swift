@@ -35,15 +35,15 @@ func chapterThree() {
 
     while isLost {
         printSlow(phrase:" \(characterName) must choose the right path to get out of the \(characterLocation.name).")
-        printSlow(phrase:" There are three paths ahead: 'Left', 'Right', and 'Straight'.")
+        printSlow(phrase:"\n There are three paths ahead: 'Left', 'Right', and 'Straight'. \n")
 
         if let userChoice = readLine(), let pathChoice = Pathchoice(rawValue: userChoice.lowercased()) {
             chosenPath = pathChoice
             switch chosenPath {
             case .left:
-                printSlow(phrase:" \(characterName) heard the faint trickling of a stream to \(characterPronouns[2]) left, and it grew louder as \(characterPronouns[0]) ventured deeper into the \(characterLocation.name).")
+                printSlow(phrase:" \n \(characterName) heard the faint trickling of a stream to \(characterPronouns[2]) left, and it grew louder as \(characterPronouns[0]) ventured deeper into the \(characterLocation.name).")
             case .right:
-                printSlow(phrase:"To the right, the birds chirped melodiously, creating a vibrant and lively atmosphere in the \(characterLocation.name).")
+                printSlow(phrase:"\n To the right, the birds chirped melodiously, creating a vibrant and lively atmosphere in the \(characterLocation.name).")
             case .straight:
                 printSlow(phrase:" \(characterName) felt a breeze rustling through the leaves ahead, creating a gentle, soothing sound in the \(characterLocation.name).")
             }
@@ -74,3 +74,5 @@ func chapterThree() {
         printSlow(phrase:"As a bonus, here's an additional scene: \(scene)")
     }
 }
+
+
