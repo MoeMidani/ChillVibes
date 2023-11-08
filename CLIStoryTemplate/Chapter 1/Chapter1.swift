@@ -51,6 +51,55 @@ func chapterOne() {
     //                print("if gender entry is invalid, the story will default to neutral.")
     //
     //            }
+    //        }//    var characterName = ""
+    //    var characterPronouns = ["they", "their", "theirs", "themself", "kid","them","they're"]
+    //    var characterAge = 12
+    //   // var storyDecision =
+    //
+    //    func newAge(yearAdd: Int) -> Int {
+    //            let updatedAge = characterAge + yearAdd
+    //            return updatedAge
+    //        }
+    //
+    //
+    //        print("Enter your name")
+    //
+    //        if let name = readLine() {
+    //            print("Hello \(name.capitalized), that's a great name! Next we need to know how old you are!")
+    //            characterName = name.capitalized
+    //        } else {
+    //            print("Come on, don't be shy!")
+    //        }
+    //
+    //        print("Enter your age (ex. '12').")
+    //
+    //        if let age = readLine() {
+    //            print("Wow, you're \(age) years old! Ok, almost time to start your adeventure, we just need your gender!")
+    //            characterAge = Int(age) ?? 12
+    //        } else {
+    //            print("we'll use 12 if you don't want to say")
+    //        }
+    //
+    //
+    //        print("Enter 'b' for boy, 'g' for girl, or 'n' for neutral")
+    //
+    //
+    //        if let gender = readLine()
+    //        {
+    //
+    //            let characterGender = gender.lowercased()
+    //
+    //            switch characterGender {
+    //            case "b":
+    //                characterPronouns = ["he", "his", "his", "himself","boy","him","he's"]
+    //            case "g":
+    //                characterPronouns = ["she", "her", "hers", "herself","girl","her","she's"]
+    //            case "n":
+    //                characterPronouns = ["they", "their", "theirs", "themself", "kid","them","they're"]
+    //            default:
+    //                print("if gender entry is invalid, the story will default to neutral.")
+    //
+    //            }
     //        }
     
     //resource arrays : https://www.programiz.com/swift-programming/arrays#google_vignette
@@ -81,13 +130,15 @@ func chapterOne() {
         """)
 //________________________________________________________my functions__________________________________________________________
    
-    
     func introParaOne() {
         print("\nOnce upon a time there was a little \(characterPronouns[4]) named \(characterName). \(characterPronouns[0].capitalized) lived with \(characterPronouns[1]) grandpa George and every weekend they would take an adventure through the forest. \(characterName) loved to find things and explore the forest with grandpa George. \(characterName)'s favorite thing to do was to look for clues and find different animals. On every adventure \(characterName)'s grandpa taught \(characterPronouns[5]) how to use \(characterPronouns[1]) eyes, ears, nose and hands to make new discoveries. \(characterName) would soon be \(newAge(yearAdd: 1)), and grandpa George wants to test \(characterPronouns[1]) knowledge, so he put together a plan. Grandpa George tells \(characterPronouns[5]) that if \(characterPronouns[0]) can get through the forest by \(characterPronouns[3]), \(characterPronouns[0]) will receive a prize. \(characterName) needs to use all \(characterPronouns[1]) senses to get through the forest alone. \(characterName) is sure \(characterPronouns[0]) can do it, but \(characterPronouns[6]) still a little afraid.\(characterPronouns[0].capitalized) needs your help! With \(characterPronouns[1]) tools on their back you you by there side, \(characterPronouns[6]) sure to pass grandpa's test.")
+        
+        print("if you need a little help, type \"hint\" ")
     }
     
     func storyDecisionPara() {
-        //  var storyDecision = ""
+      
+        
         
         var routeOne = readLine()
         while routeOne == ""{
@@ -99,7 +150,6 @@ func chapterOne() {
             routeOne = readLine()
         }
         
-       // let routeBool : Bool
         
         while routeOne != "1" && routeOne != "2" {
             print("Which path will you choose, '1' or '2'? ")
@@ -142,7 +192,7 @@ func chapterOne() {
         
         let Q1 = AnimalQuestion(question: "\nWhat animal has teeth that grow forever, and sometimes lives in colonies called fluffles?", answer: "Rabbit", hint: "Peter had a cotton tail.")
         let Q2 = AnimalQuestion(question: "\nWhat animal has sharp teeth, howls in the night, and eats both plants and animals?", answer: "Coyote", hint: "Wolves aren't the only wild thing that howls!")
-        let Q3 = AnimalQuestion(question: "\nWhich animal is a member of the Sciuridae family, goes chip-chip when it senses danger, and eats a diet of plants, seeds, berries, insects, worms, and frogs?", answer: "Chipmunk", hint: "This little animal wears two stripes on it's back!")
+        let Q3 = AnimalQuestion(question: "\nWhich animal is a member of the Sciuridae family, goes chip-chip when it senses danger, and eats a diet of plants, seeds, berries, insects, worms, and frogs?", answer: "chipmunk", hint: "This little animal wears two stripes on it's back!")
         let Q4 = AnimalQuestion(question: "\nWhat animal can jump 15 feet, have a litter of 25 babies, and run up to 30 miles per hour?", answer: "Fox", hint: "This bushy tailed animal is sly and small to medium in size!")
         let Q5 = AnimalQuestion(question: "What animal only partially digests its food, and expells the rest in the form of pellets?", answer: "Owl", hint: "This animal's head can almost rotate in a full circle!")
         
@@ -175,29 +225,31 @@ func chapterOne() {
         """)
             
             var userAnswer = readLine()?.capitalized
-    
-            var needHint = userAnswer
+                
+                        let needHint = userAnswer
             
-            while userAnswer == "" {
-                print(selectedQuestions[index].question)
-                userAnswer = readLine()
-            }
+                        while userAnswer == "" {
+                            print(selectedQuestions[index].question)
+                            userAnswer = readLine()
+                        }
 
-            if needHint == "hint".description.capitalized {
-                print(selectedQuestions[index].hint)
-                print("Ok, give it another try!" )
-                userAnswer = readLine()?.capitalized
-            }
-            
-            if userAnswer == selectedQuestions[index].answer{
-                print("Yes, that's correct!")
-                correctAnswers += 1
+                        if needHint == "hint".description.capitalized || userAnswer != selectedQuestions[index].answer{
+                            print("Looks like you could use hint...\nOk, give it another try!")
+                            
+                            print(selectedQuestions[index].hint)
+                           
+                            userAnswer = readLine()
+                        }
+                        
+                        if userAnswer == selectedQuestions[index].answer{
+                            print("Yes, that's correct!")
+                            correctAnswers += 1
 
-            } else {
-                print("Good try! The correct answer is \(selectedQuestions[index].answer)")
-                incorrectAnswers += 1
-            }
-        }
+                        } else {
+                            print("Good try! The correct answer is \(selectedQuestions[index].answer)")
+                            incorrectAnswers += 1
+                        }
+                    }
         enum TriviaResult:Int {
             case three = 3
             case two = 2
@@ -216,7 +268,11 @@ func chapterOne() {
             print("\nGreat work, you got all \(correctAnswers) questions correct! You really know your stuff!!!.")
         default:
             print("...")
+            
+       
         }
+        
+        
     }
 }
     

@@ -21,7 +21,7 @@ func newAge(yearAdd: Int) -> Int {
 while name == ""{
     
 print("""
-Come on, we don't be shy..."
+Come on, don't be shy..."
     enter your name!
 """)
     name = readLine()
@@ -39,7 +39,7 @@ var age = readLine()
 
 while age == "" {
     print("""
-    Awww, come on now...how old are ya....
+    Awww, come on now...how old are ya?
           Enter your age (numerical)!
     """)
     age = readLine()
